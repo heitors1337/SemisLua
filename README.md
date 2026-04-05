@@ -11,8 +11,8 @@ Desenvolver um sistema que:
 
 # 🧾 Backlog 
 
-| Prioridade | Sprint | ID | User Story | Descrição |
-|------------|---------|------------|-----------|--------|
+| Prioridade | Sprint  | ID | User Story | Descrição |
+|------------|----------|------------|-----------|--------|
 |  Alta | Sprint 1 | US01 | Como usuário, quero fazer login | Para acessar a plataforma com segurança |
 |  Alta | Sprint 1 | US02 | Como usuário, quero acessar o dashboard | Para visualizar as opções do sistema |
 |  Alta | Sprint 1 | US03 | Como usuário, quero navegar entre telas | Para utilizar a plataforma facilmente |
