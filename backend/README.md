@@ -40,6 +40,18 @@ backend/
 | **PUT** | `/api/feedbacks/:feedbackId` | Atualizar feedback | ✅ |
 | **DELETE** | `/api/feedbacks/:feedbackId` | Deletar feedback | ✅ |
 
+### 📊 Reports Routes (Sprint 3)
+
+| Método | Endpoint | Descrição | Requer Auth | Restrição |
+|--------|----------|-----------|-------------|-----------|
+| **GET** | `/api/reports/overall` | Relatório geral | ✅ | Manager/Admin |
+| **GET** | `/api/reports/department` | Relatório por departamento | ✅ | Manager/Admin |
+| **GET** | `/api/reports/averages` | Médias de avaliação | ✅ | Todos |
+| **GET** | `/api/reports/departments` | Listar departamentos | ✅ | Todos |
+| **GET** | `/api/reports/managers` | Relatório de gestores | ✅ | Manager/Admin |
+| **GET** | `/api/reports/trending` | Trending feedbacks | ✅ | Manager/Admin |
+| **GET** | `/api/reports/comparison` | Comparação entre departamentos | ✅ | Manager/Admin |
+
 ## Banco de Dados (SQL)
 
 Tabelas criadas:

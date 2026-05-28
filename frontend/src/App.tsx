@@ -8,6 +8,8 @@ import { Dashboard } from './pages/Dashboard';
 import { EvaluateColleagues } from './pages/EvaluateColleagues';
 import { EvaluateManagers } from './pages/EvaluateManagers';
 import { MyFeedbacks } from './pages/MyFeedbacks';
+import { Reports } from './pages/Reports';
+import { Statistics } from './pages/Statistics';
 import './styles/global.css';
 
 function App() {
@@ -60,33 +62,28 @@ function App() {
             }
           />
 
-          {/* Placeholder pages for future sprints */}
+          {/* US07 - Visualizar Relatórios */}
           <Route
             path="/reports"
             element={
               <PrivateRoute>
-                <PagePlaceholder 
-                  title="Relatórios" 
-                  icon="📈"
-                  description="Gere e visualize relatórios de desempenho"
-                />
+                <Reports />
               </PrivateRoute>
             }
           />
 
+          {/* US08 - Médias de Avaliação */}
           <Route
             path="/statistics"
             element={
               <PrivateRoute>
-                <PagePlaceholder 
-                  title="Estatísticas" 
-                  icon="📉"
-                  description="Análise detalhada de métricas e estatísticas"
-                />
+                <Statistics />
               </PrivateRoute>
             }
           />
 
+          {/* US09 - Filtrar por Setor (implementado em Reports) */}
+          {/* Placeholder for users management */}
           <Route
             path="/users"
             element={

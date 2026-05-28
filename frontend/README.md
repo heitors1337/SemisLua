@@ -41,6 +41,28 @@ Frontend da plataforma de feedback corporativo SemisLua, desenvolvido com **Reac
 - Confirmação de envio
 - Validações de segurança (sem auto-avaliação)
 
+### US07 - Visualizar Relatórios ✅
+- Página de relatórios com múltiplas abas
+- Visão geral com estatísticas gerais
+- Relatório por departamento com filtro
+- Comparação entre departamentos
+- Listas de top-rated e need improvement
+- Visualização de dados agregados
+
+### US08 - Médias de Avaliação ✅
+- Tabela completa de médias por usuário
+- Filtros por nome e departamento
+- Ordenação por nota, feedback count ou nome
+- Filtro por tipo de usuário (employee/manager)
+- Breakdown de feedbacks por tipo (colegas vs gestores)
+- Cards de resumo com estatísticas
+
+### US09 - Filtrar por Setor ✅
+- Seletor de departamento em relatórios
+- Estatísticas específicas por setor
+- Comparação visual entre departamentos
+- Filtro integrado em múltiplas páginas
+
 ## 🚀 Começando
 
 ### Instalação

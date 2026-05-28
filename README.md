@@ -56,9 +56,9 @@ Senha: `123456`
 | 2 | US04 | Avaliar Colegas | ✅ Concluído |
 | 2 | US05 | Avaliar Gestores | ✅ Concluído |
 | 2 | US06 | Enviar Feedback | ✅ Concluído |
-| 3 | US07 | Visualizar Relatórios | ⏳ Próximo |
-| 3 | US08 | Médias de Avaliação | ⏳ Próximo |
-| 3 | US09 | Filtrar por Setor | ⏳ Próximo |
+| 3 | US07 | Visualizar Relatórios | ✅ Concluído |
+| 3 | US08 | Médias de Avaliação | ✅ Concluído |
+| 3 | US09 | Filtrar por Setor | ✅ Concluído |
 
 ## 📚 Documentação
 
@@ -80,6 +80,15 @@ Senha: `123456`
 - ✅ Estatísticas de feedback
 - ✅ Endpoints: POST (send), GET (evaluable, received, stats), PUT (update), DELETE
 
+### Backend (Sprint 3 - US07, US08, US09)
+- ✅ Controller de relatórios com 7 endpoints
+- ✅ Relatório geral com top-rated e need improvement
+- ✅ Relatório por departamento com filtro
+- ✅ Comparação entre departamentos
+- ✅ Médias de avaliação agregadas
+- ✅ Trending feedbacks (últimos 30 dias)
+- ✅ Endpoints: GET (overall, department, averages, departments, managers, trending, comparison)
+
 ### Frontend (Sprint 1 - US02/US03)
 - ✅ React com TypeScript
 - ✅ React Router para navegação
@@ -93,6 +102,13 @@ Senha: `123456`
 - ✅ Sistema de busca e filtro de usuários
 - ✅ Visualização de estatísticas de feedback
 - ✅ Abas de filtro por tipo de feedback
+
+### Frontend (Sprint 3 - US07/US08/US09)
+- ✅ Página Reports: visão geral, por departamento, comparação
+- ✅ Página Statistics: tabela de médias com filtros e busca
+- ✅ Componentes visuais: cards, tabelas, badges
+- ✅ Filtros por setor em Reports
+- ✅ Sistema de cores por rating (vermelho/amarelo/verde)
 
 ## 🔐 Segurança
 
