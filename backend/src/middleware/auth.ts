@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import jwt, { Secret } from 'jsonwebtoken';
 import { IUser, IAuthRequest } from '../types';
 
 export interface AuthRequest extends Request {
@@ -15,7 +15,8 @@ export function authMiddleware(req: AuthRequest, res: Response, next: NextFuncti
       return;
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'secret') as IUser;
+    const secretKey: Secret = process.env.JWT_SECRET || 'secret';
+    const decoded = jwt.verify(token, secretKey) as IUser;
     req.user = decoded;
     next();
   } catch (error) {

@@ -83,7 +83,9 @@ export const Reports: React.FC = () => {
       const deptsRes = await reportsService.getDepartments();
       setDepartments(deptsRes.data);
       if (deptsRes.data.length > 0) {
-        setSelectedDept(deptsRes.data[0].department);
+        const firstDept = deptsRes.data[0].department;
+        setSelectedDept(firstDept);
+        await loadDepartmentReport(firstDept);
       }
 
       // Carregar comparação

@@ -2,7 +2,7 @@ import { Response } from 'express';
 import { getDatabase } from '../database/connection';
 import { IUser, ILoginRequest, ILoginResponse } from '../types';
 import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
+import * as jwt from 'jsonwebtoken';
 import { AuthRequest } from '../middleware/auth';
 
 export class AuthController {
@@ -30,10 +30,11 @@ export class AuthController {
         return;
       }
 
+      const secretKey = process.env.JWT_SECRET || 'secret';
       const token = jwt.sign(
         { id: user.id, email: user.email, role: user.role },
-        process.env.JWT_SECRET || 'secret',
-        { expiresIn: process.env.JWT_EXPIRE || '24h' }
+        secretKey as jwt.Secret,
+        { expiresIn: process.env.JWT_EXPIRE || '24h' } as jwt.SignOptions
       );
 
       await db.run(
