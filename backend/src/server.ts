@@ -6,6 +6,7 @@ import { seedDatabase } from './database/seed';
 import { errorHandler } from './middleware/auth';
 import authRoutes from './routes/authRoutes';
 import feedbackRoutes from './routes/feedbackRoutes';
+import reportsRoutes from './routes/reportsRoutes';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/feedbacks', feedbackRoutes);
+app.use('/api/reports', reportsRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

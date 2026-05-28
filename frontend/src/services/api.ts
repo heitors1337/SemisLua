@@ -54,3 +54,26 @@ export const feedbackService = {
   deleteFeedback: (feedbackId: number) =>
     api.delete(`/feedbacks/${feedbackId}`)
 };
+
+export const reportsService = {
+  getOverallReport: () =>
+    api.get('/reports/overall'),
+  
+  getDepartmentReport: (department: string) =>
+    api.get('/reports/department', { params: { department } }),
+  
+  getUserAverages: () =>
+    api.get('/reports/averages'),
+  
+  getDepartments: () =>
+    api.get('/reports/departments'),
+  
+  getManagersReport: () =>
+    api.get('/reports/managers'),
+  
+  getTrendingFeedbacks: () =>
+    api.get('/reports/trending'),
+  
+  getDepartmentsComparison: () =>
+    api.get('/reports/comparison')
+};
