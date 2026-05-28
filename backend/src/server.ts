@@ -2,8 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { initializeDatabase, closeDatabase } from './database/connection';
+import { seedDatabase } from './database/seed';
 import { errorHandler } from './middleware/auth';
 import authRoutes from './routes/authRoutes';
+import feedbackRoutes from './routes/feedbackRoutes';
 
 dotenv.config();
 
@@ -16,6 +18,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/feedbacks', feedbackRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
@@ -30,6 +33,8 @@ async function startServer() {
   try {
     await initializeDatabase();
     console.log('✓ Database initialized successfully');
+
+    await seedDatabase();
 
     app.listen(PORT, () => {
       console.log(`✓ Server running on http://localhost:${PORT}`);
@@ -51,3 +56,4 @@ process.on('SIGINT', async () => {
 startServer();
 
 export default app;
+

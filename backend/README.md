@@ -29,6 +29,17 @@ backend/
 | **DELETE** | `/api/auth/logout` | Fazer logout | ✅ |
 | **DELETE** | `/api/auth/account` | Deletar conta | ✅ |
 
+### 💬 Feedback Routes (Sprint 2)
+
+| Método | Endpoint | Descrição | Requer Auth |
+|--------|----------|-----------|-------------|
+| **POST** | `/api/feedbacks` | Enviar feedback | ✅ |
+| **GET** | `/api/feedbacks/evaluable-users` | Listar usuários para avaliar | ✅ |
+| **GET** | `/api/feedbacks/received` | Listar feedbacks recebidos | ✅ |
+| **GET** | `/api/feedbacks/stats` | Estatísticas de feedback | ✅ |
+| **PUT** | `/api/feedbacks/:feedbackId` | Atualizar feedback | ✅ |
+| **DELETE** | `/api/feedbacks/:feedbackId` | Deletar feedback | ✅ |
+
 ## Banco de Dados (SQL)
 
 Tabelas criadas:
